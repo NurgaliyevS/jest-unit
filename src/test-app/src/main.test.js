@@ -2,7 +2,7 @@ import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Test from "./main";
 
-describe("TEST APP", () => {
+describe("Main file", () => {
   test("renders learn react link", () => {
     render(<Test />);
     const helloWorldElem = screen.getByText(/hello world/i);
