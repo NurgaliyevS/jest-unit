@@ -1,8 +1,6 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import MainPage from "./pages/MainPage";
-import AboutPage from "./pages/AboutPage";
-import ErrorPage from "./pages/ErrorPage";
+import { Link } from "react-router-dom";
+import AppRouter from "./routes/AppRouter";
 
 const App = () => {
   return (
@@ -13,11 +11,10 @@ const App = () => {
       <Link to="/about-page" data-testid="main-about">
         about
       </Link>
-      <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/about-page" element={<AboutPage />} />
-        <Route path="/*" element={<ErrorPage />} />
-      </Routes>
+      <Link to="/users" data-testid="users-about">
+        users
+      </Link>
+      <AppRouter />
     </div>
   );
 };
