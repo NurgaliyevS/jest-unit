@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function App() {
+function Test() {
   const [data, setData] = useState(null);
   const [toggle, setToggle] = useState(false);
   const [value, setValue] = useState("");
@@ -33,4 +33,4 @@ function App() {
   );
 }
 
-export default App;
+export default Test;

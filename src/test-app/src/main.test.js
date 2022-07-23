@@ -1,10 +1,10 @@
 import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import App from "./App";
+import Test from "./main";
 
 describe("TEST APP", () => {
   test("renders learn react link", () => {
-    render(<App />);
+    render(<Test />);
     const helloWorldElem = screen.getByText(/hello world/i);
     const btn = screen.getByRole("button");
     const input = screen.getByPlaceholderText(/input value/i);
@@ -15,7 +15,7 @@ describe("TEST APP", () => {
   });
 
   test("renders learn react link", async () => {
-    render(<App />);
+    render(<Test />);
     // const helloWorldElem = screen.queryByText(/hello2/i);
     // expect(helloWorldElem).toBeNull();
     screen.debug();
@@ -26,7 +26,7 @@ describe("TEST APP", () => {
   });
 
   test("CLICK EVENT", () => {
-    render(<App />);
+    render(<Test />);
     const btn = screen.getByTestId("toggle-btn");
     expect(screen.queryByTestId("toggle-elem")).toBeNull();
     fireEvent.click(btn);
@@ -36,7 +36,7 @@ describe("TEST APP", () => {
   });
 
   test("INPUT EVENT", () => {
-    render(<App />);
+    render(<Test />);
     const input = screen.getByPlaceholderText(/input value/i);
     expect(screen.queryByTestId("value-elem")).toContainHTML("");
     // Искуственное событие
