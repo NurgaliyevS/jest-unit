@@ -11,7 +11,7 @@ describe("App file", () => {
       </MemoryRouter>
     );
     const mainLink = screen.getByTestId("main-link");
-    const aboutLink = screen.getByTestId("main-about");
+    const aboutLink = screen.getByTestId("about-link");
     userEvent.click(aboutLink);
     expect(screen.getByTestId("about-page")).toBeInTheDocument();
     userEvent.click(mainLink);
